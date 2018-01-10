@@ -10,6 +10,7 @@ from .hexary import (  # noqa: F401
 
 
 class Trie(HexaryTrie):
+
     def __init__(self, *args, **kwargs):
         warnings.simplefilter('always', DeprecationWarning)
         warnings.warn(DeprecationWarning(
@@ -21,4 +22,5 @@ class Trie(HexaryTrie):
         super().__init__(*args, **kwargs)
 
 
-__version__ = pkg_resources.get_distribution("trie").version
+__version__ = 2
+# pkg_resources.get_distribution("trie").version
